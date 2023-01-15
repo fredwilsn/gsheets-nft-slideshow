@@ -118,8 +118,10 @@
 		$(".nft").hide();
 		$("#nft_"+currentNFT).show();
 
-		max_height = window.innerHeight - NFT['Margin'];
-		max_width = window.innerWidth - NFT['Margin'];
+		// max_height = window.innerHeight - NFT['Margin'];
+		// max_width = window.innerWidth - NFT['Margin'];
+		max_height = window.innerHeight;
+		max_width = window.innerWidth;
 		window_orientation = "Landscape";
 		if (window.innerHeight > window.innerWidth) {
 			window_orientation = "Portrait";
@@ -144,8 +146,10 @@
 
 		// set orientation
 		if (NFT['Orientation'] == "Portrait") {
-			$("#nft_"+currentNFT).height(max_height);
+			console.log(max_width);
+			$("#nft_"+currentNFT).width(max_width);
 		} 
+ 
 		if (NFT['Orientation'] == "Landscape") {
 			$("#nft_"+currentNFT).width(max_width);
 			if (window_orientation == "Portrait") {

@@ -147,7 +147,12 @@
 		// set orientation
 		if (NFT['Orientation'] == "Portrait") {
 			console.log(max_width);
+			// $("#nft_"+currentNFT).width(max_width); replace with Square logic
 			$("#nft_"+currentNFT).width(max_width);
+				var offset_top = (max_height - $("#nft_"+currentNFT).height()) / 2;
+				$("#nft_"+currentNFT).css('margin-top', offset_top + "px");
+			} else {
+				$("#nft_"+currentNFT).height(max_height);
 		} 
  
 		if (NFT['Orientation'] == "Landscape") {

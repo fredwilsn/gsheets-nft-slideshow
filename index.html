@@ -174,10 +174,11 @@
 
 			// adding an orientation called Custom
 		if (NFT['Orientation'] == "Custom") {
-			$("#nft_"+currentNFT).width(max_width);
-			$("#nft_"+currentNFT).css('margin-top',"px");
-		} else {
-			$("#nft_"+currentNFT).height(max_height);
+			if (window_orientation == "Portrait") {
+				$("#nft_"+currentNFT).width(max_width);
+				$("#nft_"+currentNFT).css('margin-top',"px");
+			} else {
+				$("#nft_"+currentNFT).height(max_height);
 			}
 		}	
 

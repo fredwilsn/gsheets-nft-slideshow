@@ -165,6 +165,7 @@
 		if (NFT['Orientation'] == "Square") {
 			if (window_orientation == "Portrait") {
 				$("#nft_"+currentNFT).width(max_width);
+				$("#nft_"+currentNFT).height(max_width);
 				var offset_top = (max_height - $("#nft_"+currentNFT).height()) / 2;
 				$("#nft_"+currentNFT).css('margin-top', offset_top + "px");
 			} else {
@@ -174,12 +175,12 @@
 
 			// adding an orientation called Custom
 		if (NFT['Orientation'] == "Custom") {
-			//if (window_orientation == "Portrait") {
+			if (window_orientation == "Portrait") {
 				$("#nft_"+currentNFT).width(max_width);
 				$("#nft_"+currentNFT).css('margin-top',"px");
-			//} else {
-			//	$("#nft_"+currentNFT).height(max_height);
-			//}
+			} else {
+				$("#nft_"+currentNFT).height(max_height);
+			}
 		}	
 
 		// set caption
